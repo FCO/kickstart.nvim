@@ -32,7 +32,7 @@ return {
       },
       { 'dhruvasagar/vim-table-mode' },
     },
-    event = 'verylazy',
+    event = 'VeryLazy',
     config = function()
       -- load treesitter grammar for org
       -- require("orgmode").setup_ts_grammar()
@@ -86,9 +86,9 @@ return {
     config = function()
       require('telescope').load_extension 'orgmode'
 
-      vim.keymap.set('n', '<leader>r', require('telescope').extensions.orgmode.refile_heading)
-      vim.keymap.set('n', '<leader>fh', require('telescope').extensions.orgmode.search_headings)
-      vim.keymap.set('n', '<leader>li', require('telescope').extensions.orgmode.insert_link)
+      vim.keymap.set('n', '<leader>nhr', require('telescope').extensions.orgmode.refile_heading, { desc = 'Refile heading' })
+      vim.keymap.set('n', '<leader>nhs', require('telescope').extensions.orgmode.search_headings, { desc = 'Search headings' })
+      vim.keymap.set('n', '<leader>nil', require('telescope').extensions.orgmode.insert_link, { desc = 'Insert link' })
     end,
   },
 }
