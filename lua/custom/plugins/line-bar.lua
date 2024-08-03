@@ -10,5 +10,6 @@ return {
       lualine_y = {},
       lualine_z = { 'tabs' },
     },
+    extensions = { 'oil' },
   },
 }
