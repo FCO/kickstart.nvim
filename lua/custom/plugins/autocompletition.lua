@@ -18,13 +18,16 @@ return { -- Autocompletion
         -- `friendly-snippets` contains a variety of premade snippets.
         --    See the README about individual language/framework/plugin snippets:
         --    https://github.com/rafamadriz/friendly-snippets
-        -- {
-        --   'rafamadriz/friendly-snippets',
-        --   config = function()
-        --     require('luasnip.loaders.from_vscode').lazy_load()
-        --   end,
-        -- },
+        {
+          'rafamadriz/friendly-snippets',
+          config = function()
+            require('luasnip.loaders.from_vscode').lazy_load()
+          end,
+        },
       },
+      config = function()
+        require 'custom.snippets'
+      end,
     },
     'saadparwaiz1/cmp_luasnip',
 
@@ -94,6 +97,16 @@ return { -- Autocompletion
         ['<C-h>'] = cmp.mapping(function()
           if luasnip.locally_jumpable(-1) then
             luasnip.jump(-1)
+          end
+        end, { 'i', 's' }),
+        ['<C-j>'] = cmp.mapping(function()
+          if luasnip.choice_active() then
+            luasnip.change_choice(1)
+          end
+        end, { 'i', 's' }),
+        ['<C-k>'] = cmp.mapping(function()
+          if luasnip.choice_active() then
+            luasnip.change_choice(-1)
           end
         end, { 'i', 's' }),
 
