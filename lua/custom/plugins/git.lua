@@ -21,6 +21,9 @@ return {
       'nvim-telescope/telescope.nvim', -- optional
       'ibhagwan/fzf-lua', -- optional
     },
-    config = true,
+    config = function()
+      require('neogit').setup {}
+      vim.keymap.set('n', '<leader>hh', ':Neogit<CR>', { desc = 'Neogit', noremap = true, silent = true })
+    end,
   },
 }
