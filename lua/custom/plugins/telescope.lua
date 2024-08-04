@@ -22,12 +22,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
 
     -- Useful for getting pretty icons, but requires a Nerd Font.
     { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
-    {
-      'olacin/telescope-cc.nvim',
-      -- config = function()
-      --   vim.keymap.set('n', '<leader>hc', ':Telescope conventional_commits<CR>', { desc = 'Commit', noremap = true, silent = true })
-      -- end,
-    },
   },
   config = function()
     -- Telescope is a fuzzy finder that comes with a lot of different things that

@@ -19,11 +19,20 @@ return {
 
       -- Only one of these is needed, not both.
       'nvim-telescope/telescope.nvim', -- optional
-      'ibhagwan/fzf-lua', -- optional
     },
     config = function()
       require('neogit').setup {}
       vim.keymap.set('n', '<leader>hh', ':Neogit<CR>', { desc = 'Neogit', noremap = true, silent = true })
     end,
   },
+  -- {
+  --   'davidsierradz/cmp-conventionalcommits',
+  --   -- config = function()
+  --   --   -- GAMBIARRA
+  --   --   local source = require 'cmp-conventionalcommits'
+  --   --   function source:is_available()
+  --   --     return vim.list_contains({ 'gitcommit', 'NeogitCommitMessage' }, 'gitcommit')
+  --   --   end
+  --   -- end,
+  -- },
 }
