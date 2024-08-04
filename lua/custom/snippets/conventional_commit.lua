@@ -25,6 +25,7 @@ local snip = s('conventional_commit_message', {
     t '',
   }),
   t ': ',
+  i(3, 'commit title'),
 })
 
 ls.add_snippets('gitcommit', { snip })

@@ -109,6 +109,9 @@ return { -- Autocompletion
             luasnip.change_choice(-1)
           end
         end, { 'i', 's' }),
+        ['<C-;>'] = cmp.mapping(function()
+          require 'luasnip.extras.select_choice'()
+        end, { 'i', 's' }),
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
