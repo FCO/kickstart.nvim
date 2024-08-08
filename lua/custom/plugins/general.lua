@@ -13,6 +13,7 @@ return {
   'olacin/telescope-cc.nvim',
   'tpope/vim-fugitive',
   'junegunn/vim-easy-align',
+  'rubiin/fortune.nvim',
   { 'nvim-treesitter/nvim-treesitter-context', opts = { max_lines = 3 } },
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',

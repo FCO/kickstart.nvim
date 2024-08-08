@@ -123,7 +123,7 @@ return { -- Autocompletion
           group_index = 0,
         },
         { name = 'nvim_lsp' },
-        { name = 'cmp_ai' },
+        -- { name = 'cmp_ai' },
         { name = 'luasnip' },
         { name = 'path' },
       },
