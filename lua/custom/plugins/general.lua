@@ -14,6 +14,8 @@ return {
   'tpope/vim-fugitive',
   'junegunn/vim-easy-align',
   'rubiin/fortune.nvim',
+  'mg979/vim-visual-multi',
+  { 'echasnovski/mini.nvim', version = false },
   { 'nvim-treesitter/nvim-treesitter-context', opts = { max_lines = 3 } },
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',

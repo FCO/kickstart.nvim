@@ -240,5 +240,9 @@ require('lazy').setup('custom.plugins', {
 
 vim.api.nvim_set_keymap('n', ']b', ':bnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '[b', ':bprev<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('o', 'A', ':normal ggVGo<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', 'A', 'Gogg', { noremap = true, silent = true })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
