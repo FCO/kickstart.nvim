@@ -1,6 +1,6 @@
 vim.api.nvim_create_autocmd('FileType', {
   group = vim.api.nvim_create_augroup('conventional_commits_form', { clear = true }),
-  pattern = 'gitcommit', -- { 'gitcommit', 'NeogitCommitMessage' },
+  pattern = 'gitcommit',
   callback = function()
     vim.ui.select({
       'feat',
@@ -19,9 +19,9 @@ vim.api.nvim_create_autocmd('FileType', {
         end
         commit_message = commit_message .. ': '
         vim.api.nvim_buf_set_text(0, 0, 0, 0, 0, { commit_message })
+        vim.api.nvim_feedkeys('A', 'n', true)
       end)
     end)
-    vim.api.nvim_feedkeys('A', 'n', false)
   end,
 })
 
