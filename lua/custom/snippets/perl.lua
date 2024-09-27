@@ -38,6 +38,8 @@ local function snsub()
     d(2, function()
       return shift(3, '\t', true)
     end, {}),
+    t { '', '' },
+    i(3),
     t { '', '}', '' },
   })
 end
@@ -155,7 +157,7 @@ local spackage = s('class', {
     t 'use Mouse;',
     t 'use Moo;',
   }),
-  t { '', '# Attributes:', '' },
+  t { '', '', '# Attributes:', '' },
   c(3, {
     t '',
     d(1, snhas, {}),
@@ -166,7 +168,7 @@ local spackage = s('class', {
     d(1, methods, {}),
   }),
   i(5),
-  t { '', '', '1;' },
+  t { '', '1;' },
 })
 
 ls.add_snippets('perl', { shas, sub, s('shift', { shift(1, '', true) }), spackage })

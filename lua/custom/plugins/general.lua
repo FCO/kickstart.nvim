@@ -3,6 +3,7 @@
 --
 -- See the kickstart.nvim README for more information
 return {
+  'rafcamlet/nvim-luapad',
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'jeetsukumaran/vim-indentwise',
   'aklt/plantuml-syntax',
