@@ -3,7 +3,7 @@ return {
   version = '*',
   config = function()
     require('toggleterm').setup {
-      open_mapping = '<leader>TT',
+      -- open_mapping = '<leader>TT',
     }
     vim.api.nvim_set_keymap('n', '<S-CR>', ':TermExec cmd="⏎"<CR>', { desc = 'Send new line to terminal', noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', '<Leader>T ', ':TermSelect<cr>', { desc = 'Open terminal', noremap = true, silent = true })

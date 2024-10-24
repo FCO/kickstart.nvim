@@ -1,3 +1,23 @@
+if vim.g.neovide then
+  vim.g.neovide_fullscreen = true
+  vim.g.neovide_cursor_animation_length = 0
+  vim.g.neovide_cursor_trail_size = 0
+  vim.g.neovide_cursor_animate_command_line = false
+  vim.g.neovide_cursor_vfx_mode = ''
+
+  vim.env.PATH = vim.env.HOME
+    .. '/bin:/usr/local/bin:'
+    .. vim.env.HOME
+    .. '/nvim-macos/bin/:'
+    .. vim.env.HOME
+    .. '/rakudo/install/bin:'
+    .. vim.env.HOME
+    .. '/zef/bin:'
+    .. vim.env.HOME
+    .. '/rakudo/install/share/perl6/site/bin:'
+    .. vim.env.PATH
+end
+
 --[[
 
 =====================================================================
@@ -249,6 +269,10 @@ vim.api.nvim_set_keymap('n', '[b', ':bprev<CR>', { noremap = true, silent = true
 
 vim.api.nvim_set_keymap('o', 'A', ':normal ggVGo<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', 'A', 'Gogg', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<leader>zi', '<c-w>_ | <c-w>|', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>zo', '<c-w>=', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bd', ':bdelete<CR>', { noremap = true, silent = true })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

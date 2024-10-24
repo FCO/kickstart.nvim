@@ -12,7 +12,13 @@ vim.api.nvim_create_autocmd('FileType', {
       'test',
       'chore',
     }, { prompt = 'Change type' }, function(type)
+      if type == nil then
+        return
+      end
       vim.ui.input({ prompt = 'Context' }, function(context)
+        if context == nil then
+          return
+        end
         local commit_message = type
         if context ~= '' then
           commit_message = commit_message .. '(' .. context .. ')'
