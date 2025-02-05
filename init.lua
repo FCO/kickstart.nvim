@@ -267,8 +267,8 @@ require('lazy').setup('custom.plugins', {
 vim.api.nvim_set_keymap('n', ']b', ':bnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '[b', ':bprev<CR>', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('o', 'A', ':normal ggVGo<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', 'A', 'Gogg', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('o', 'A', ':normal ggVGo<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('v', 'A', 'Gogg', { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap('n', '<leader>zi', '<c-w>_ | <c-w>|', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>zo', '<c-w>=', { noremap = true, silent = true })

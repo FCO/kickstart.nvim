@@ -107,4 +107,18 @@ return {
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
+
+  -- require('lspconfig').perlnavigator.setup {
+  --   cmd = { 'perlnavigator' },
+  --   settings = {
+  --     perlnavigator = {
+  --       perltidyProfile = '/Users/fernando/working/humanstate/payprop/payprop_www/.perltidyrc',
+  --       -- perlPath = 'perl',
+  --       -- enableWarnings = true,
+  --       -- perltidyProfile = '',
+  --       -- perlcriticProfile = '',
+  --       -- perlcriticEnabled = true,
+  --     },
+  --   },
+  -- },
 }

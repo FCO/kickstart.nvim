@@ -145,6 +145,7 @@ return { -- Autocompletion
         -- { name = 'cmp_ai' },
         { name = 'luasnip' },
         { name = 'path' },
+        -- { name = 'codecompanion' },
       },
     }
   end,
